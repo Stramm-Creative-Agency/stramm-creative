@@ -1,0 +1,865 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  margin: 0; }
+
+.Header {
+  width: auto;
+  height: auto;
+  background-color: #f1f2f2; }
+
+.navcontain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 88vw;
+  margin: 0 auto;
+  padding-top: 30px; }
+
+.navlogo {
+  width: 30px; }
+
+.navlinkcontain {
+  display: inline-block; }
+
+.navlinks {
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.navlinkCTA {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #1922FB;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #1922FB;
+  padding: 9px 15px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 350ms ease; }
+  .navlinkCTA:hover {
+    background-color: #1922FB;
+    color: #ffffff; }
+
+.herosection {
+  width: 81vw;
+  margin: 0 auto;
+  background-color: none; }
+  @media (max-width: 768px) {
+    .herosection {
+      width: 90vw; } }
+
+.herotext {
+  font-size: 7.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  padding: 23rem 0rem 15rem;
+  max-width: 95rem;
+  line-height: 7.4rem;
+  margin: 0; }
+  @media (max-width: 320px) {
+    .herotext {
+      font-size: 3.7rem;
+      font-family: 'Centra No2','Montserrat', sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      color: #000000;
+      padding: 10rem 0rem 5rem;
+      line-height: 3.7rem; } }
+@media (min-width: 321px) and (max-width: 425px) {
+  .herotext {
+    font-size: 4.6rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    padding: 10rem 0rem 5rem;
+    line-height: 4.6rem; } }
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .herotext {
+    font-size: 5.2rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    padding: 15rem 0rem 10rem;
+    line-height: 5.2rem; } }
+
+@media (min-width: 769px) and (max-width: 1365px) {
+  .herotext {
+    font-size: 6.5rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    padding: 20rem 0rem 5rem;
+    max-width: 85rem;
+    line-height: 6.5rem; } }
+
+.Biocontain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 81vw;
+  margin: 0 auto;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  padding: 5rem 0; }
+  @media (max-width: 768px) {
+    .Biocontain {
+      -webkit-justify-content: flex-first;
+      -moz-justify-content: flex-first;
+      -ms-justify-content: flex-first;
+      justify-content: flex-first;
+      -ms-flex-pack: flex-first;
+      flex-wrap: wrap;
+      width: 90vw;
+      padding: 2rem 0; } }
+
+.wwa {
+  font-size: 1.3rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  display: inline-block;
+  padding-top: 1rem;
+  border-top: 0.2rem solid #1922fb;
+  text-transform: uppercase;
+  margin: 0; }
+  @media (max-width: 320px) {
+    .wwa {
+      font-size: 1rem;
+      font-family: 'Centra No2','Montserrat', sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      color: #000000;
+      padding-bottom: 3rem; } }
+@media (min-width: 321px) and (max-width: 425px) {
+  .wwa {
+    font-size: 1.1rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    padding-bottom: 3rem; } }
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .wwa {
+    font-size: 1.2rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    padding-bottom: 3rem; } }
+
+@media (min-width: 769px) and (max-width: 1365px) {
+  .wwa {
+    font-size: 1.3rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000; } }
+
+.Biotitle {
+  font-size: 3.6rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  display: block;
+  margin: 0; }
+  @media (max-width: 320px) {
+    .Biotitle {
+      font-size: 2.2rem;
+      font-family: 'Centra No2','Montserrat', sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      color: #000000; } }
+@media (min-width: 321px) and (max-width: 425px) {
+  .Biotitle {
+    font-size: 2.8rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000; } }
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .Biotitle {
+    font-size: 3.2rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000; } }
+
+@media (min-width: 769px) and (max-width: 1365px) {
+  .Biotitle {
+    font-size: 3.4rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000; } }
+
+.dip {
+  display: none; }
+
+.Biotext {
+  font-size: 2.5rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  display: inline-block;
+  max-width: 65rem;
+  padding-top: .5rem;
+  margin: 0; }
+  @media (max-width: 320px) {
+    .Biotext {
+      font-size: 1.6rem;
+      font-family: 'Centra No2','Montserrat', sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      color: #000000;
+      padding-top: 1rem; } }
+@media (min-width: 321px) and (max-width: 425px) {
+  .Biotext {
+    font-size: 1.8rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #000000;
+    padding-top: 1rem; } }
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .Biotext {
+    font-size: 2rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #000000;
+    padding-top: 1rem; } }
+
+@media (min-width: 769px) and (max-width: 1365px) {
+  .Biotext {
+    font-size: 2.3rem;
+    font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #000000;
+    padding-top: 1rem; } }
+
+@media (max-width: 767px) {
+  .break {
+    display: none; } }
+
+.casestudygallery {
+  background-color: white; }
+
+.gallery-container {
+  display: grid;
+  grid-template-rows: repeat(3, 600px);
+  grid-template-areas: "item-1 item-1 item-2" "item-3 item-4 item-4" "item-5 item-6 item-7";
+  grid-gap: 1rem; }
+  @media (max-width: 40rem) {
+    .gallery-container {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-areas: "item-1  item-2" "item-3  item-4" "item-5 item-6 "; } }
+
+.gallery-item-1 {
+  background-color: #1922FB;
+  grid-area: item-1; }
+
+.gallery-item-2 {
+  background-color: #d4d4d4;
+  grid-area: item-2; }
+
+.gallery-item-3 {
+  background-color: #000000;
+  grid-area: item-3; }
+
+.gallery-item-4 {
+  background-color: #fff00d;
+  grid-area: item-4; }
+
+.gallery-item-5 {
+  background-color: #06083C;
+  grid-area: item-5; }
+
+.gallery-item-6 {
+  background-color: #d4d4d4;
+  grid-area: item-6; }
+
+.gallery-item-7 {
+  background-color: #1922FB;
+  grid-area: item-7; }
+
+.Services_section {
+  background-color: #000000; }
+
+.servicescontain {
+  width: 81vw;
+  margin: 0 auto; }
+
+.wwd {
+  font-size: 1.3rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  display: inline-block;
+  padding-top: 1rem;
+  border-top: 0.2rem solid #1922fb;
+  text-transform: uppercase;
+  margin: 0;
+  grid-area: wwd;
+  display: inline; }
+
+.servicescat {
+  font-size: 1.8rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  margin-bottom: 10rem;
+  max-width: 60rem;
+  grid-area: text;
+  display: inline-block; }
+
+.strategy {
+  font-size: 4.1rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  margin: 0;
+  display: inline-block;
+  grid-area: strat; }
+
+.strategy-list {
+  font-size: 2.5rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #d4d4d4;
+  margin-top: 3rem;
+  display: inline-block;
+  grid-area: slist;
+  line-height: 5rem; }
+
+.identity {
+  font-size: 4.1rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  margin: 0;
+  display: inline-block;
+  grid-area: ident; }
+
+.identity-list {
+  font-size: 2.5rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #d4d4d4;
+  margin-top: 3rem;
+  display: inline-block;
+  grid-area: ilist;
+  line-height: 5rem; }
+
+.experience {
+  font-size: 4.1rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  margin: 0;
+  display: inline-block;
+  grid-area: expr; }
+
+.experience-list {
+  font-size: 2.5rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #d4d4d4;
+  margin-top: 3rem;
+  display: inline-block;
+  grid-area: xlist;
+  line-height: 5rem; }
+
+.services-area {
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "wwd text text" "strat ident expr" "slist ilist xlist";
+  padding: 15rem 0;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between; }
+
+.CTA {
+  background-color: #1922FB; }
+
+.ctacontain {
+  width: 81vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 10rem 0; }
+
+.ctatext {
+  font-size: 4.1rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center; }
+
+.ctabutton {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  padding: 9px 15px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 350ms ease;
+  margin: 3rem auto .8rem;
+  width: 55rem; }
+  .ctabutton:hover {
+    background-color: #fff00d;
+    color: #000000; }
+
+.footer {
+  background-color: #d4d4d4; }
+
+.Footlogo {
+  grid-area: logo;
+  width: 16rem; }
+
+.copyright {
+  grid-area: 6;
+  font-size: 1.2rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #06083C;
+  margin: 0; }
+
+.walkin {
+  grid-area: walkin; }
+
+.sayhello {
+  grid-area: drop; }
+
+.connect {
+  grid-area: connect; }
+
+.returntotop {
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #1922FB;
+  text-transform: uppercase;
+  margin: 0;
+  grid-area: return;
+  display: inline;
+  text-decoration: none; }
+
+.footercontain {
+  display: -ms-grid;
+  display: grid;
+  width: 81vw;
+  margin: 0 auto;
+  grid-template-areas: "logo logo   walkin drop connect return";
+  padding: 5rem 0; }
+
+.foottitle {
+  font-size: 1.8rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  margin: 0 0 1rem; }
+
+.footaddr {
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  margin: 0;
+  line-height: 1.8rem; }
+
+.sociallinks {
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  text-decoration: none;
+  margin-top: 0;
+  line-height: 1.8rem; }
+  .sociallinks:hover {
+    color: #1922FB; }
+
+.w-header {
+  width: auto;
+  height: auto;
+  background-color: #f1f2f2; }
+
+.w-navlinks {
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.w-herosection {
+  width: 81vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  height: auto;
+  padding-top: 15rem;
+  padding-bottom: 10rem; }
+
+.w-herotext {
+  font-size: 6.5rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  max-width: 85rem;
+  line-height: 6.5rem;
+  margin-bottom: 2rem; }
+
+.w-heropara {
+  font-size: 2.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 8rem; }
+
+.w-wwd {
+  font-size: 1.3rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  display: inline-block;
+  padding-top: 1rem;
+  border-top: 0.2rem solid #1922fb;
+  text-transform: uppercase;
+  margin: 0; }
+
+.s-header {
+  width: auto;
+  height: auto;
+  background-color: #000000; }
+
+.s-navlinks {
+  font-size: 1.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  padding: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.s-herosection {
+  width: 81vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  height: auto;
+  padding-top: 15rem;
+  padding-bottom: 10rem; }
+
+.s-herotext {
+  font-size: 6.5rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  max-width: 85rem;
+  line-height: 6.5rem;
+  margin-bottom: 2rem; }
+
+.s-heropara {
+  font-size: 2.4rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  margin-bottom: 8rem; }
+
+.s-catlink {
+  font-size: 1.3rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  margin-right: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 1rem;
+  border-top: 0.2rem solid transparent;
+  text-transform: uppercase; }
+  .s-catlink:hover {
+    border-top: 0.2rem solid #1922FB; }
+
+.s-strategy {
+  background-color: #f1f2f2; }
+
+.s-identity {
+  background-color: #d4d4d4; }
+
+.s-experience {
+  background-color: #06083C; }
+
+.s-strategy-contain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 81vw;
+  margin: 0 auto; }
+
+.s-strategy-text {
+  padding-right: 10rem; }
+
+.s-strategy-header {
+  font-size: 4.1rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 3rem; }
+
+.s-strategy-describ {
+  font-size: 1.8rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 3rem; }
+
+.s-strategy-catig-contain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.s-strategy-catig {
+  font-size: 1.6rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  margin-right: 6rem;
+  line-height: 4rem; }
+
+.s-strategy-img {
+  width: 50rem; }
+
+.s-identity-contain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 81vw;
+  margin: 0 auto; }
+
+.s-identity-text {
+  padding-left: 10rem; }
+
+.s-identity-header {
+  font-size: 4.1rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 3rem; }
+
+.s-identity-describ {
+  font-size: 1.8rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 3rem; }
+
+.s-identity-catig-contain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.s-identity-catig {
+  font-size: 1.6rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  margin-right: 6rem;
+  line-height: 4rem; }
+
+.s-identity-img {
+  width: 50rem; }
+
+.s-experience-contain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 81vw;
+  margin: 0 auto; }
+
+.s-experience-text {
+  padding-right: 10rem; }
+
+.s-experience-header {
+  font-size: 4.1rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  margin-bottom: 3rem; }
+
+.s-experience-describ {
+  font-size: 1.8rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  margin-bottom: 3rem; }
+
+.s-experience-catig-contain {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.s-experience-catig {
+  font-size: 1.6rem;
+  font-family: 'Centra No2','Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+  margin-right: 6rem;
+  line-height: 4rem; }
+
+.s-experience-img {
+  width: 50rem; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,796 @@
+@import "breakpoints";
+$blue: #1922FB;
+$lblue: #4BB9FC;
+$dblue: #06083C;
+$black: #000000;
+$white: #ffffff;
+$dgray: #d4d4d4;
+$lgray: #f1f2f2;
+$yellow: #fff00d;
+	
+// Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around 
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch 
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+       -ms-flex-align: $align;
+          align-items: $align;
+}
+
+@mixin Bold_font($size,$color) {
+	font-size: $size;
+	font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+	color: $color;
+}
+
+@mixin Book_font($size,$color) {
+	font-size: $size;
+	font-family: 'Centra No2','Montserrat', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+	color: $color;
+}
+
+@mixin describer($color) {
+	@include Bold_font(1.3rem,$color);
+	display: inline-block;
+		padding-top: 1rem;
+	    border-top: 0.2rem solid #1922fb;
+	    text-transform: uppercase;
+	    margin: 0;
+}
+// @mixin mainbtn() {
+
+
+
+@mixin btn() {
+	display: inline-block;
+	background-color: transparent;
+	border: 2px solid $blue;
+	text-align: center;
+	text-transform: uppercase;
+	@include Bold_font(1.4rem,$blue);
+	padding: 9px 15px;
+	margin-left: 20px;
+	cursor: pointer;
+	transition: all 350ms ease;
+	&:hover{
+		background-color: $blue;
+		color: $white;
+	}
+}
+
+@mixin btn-alt() {
+	
+}
+@mixin ctabtn() {
+	display: inline-block;
+	background-color: transparent;
+	border: 2px solid $white;
+	text-align: center;
+	text-transform: uppercase;
+	@include Bold_font(1.4rem,$white);
+	padding: 9px 15px;
+	margin-left: 20px;
+	cursor: pointer;
+	transition: all 350ms ease;
+	&:hover{
+		background-color: $yellow;
+		color: $black;
+	}
+}
+
+@mixin mycontain() {
+	width: 81vw;
+	margin: 0 auto;
+}
+@mixin mycontainW() {
+	width: 88vw;
+	margin: 0 auto;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+html {
+	// font-family: 'Centra-Bold','Montserrat', sans-serif;
+	font-size: 62.5%; 
+	scroll-behavior: smooth;
+}
+
+body{
+	margin: 0;
+
+}
+
+.Header{
+	width: auto;
+	height: auto;
+	background-color: $lgray;
+}
+
+.navcontain{
+	@include flexbox;
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include mycontainW;
+	padding-top: 30px;
+
+}
+
+.navlogo{
+	width: 30px;
+
+}
+
+.navlinkcontain{
+	display: inline-block;
+
+}
+
+.navlinks{
+	@include Bold_font(1.4rem,$black);
+	padding: 0 20px;
+	text-decoration: none;
+  	text-transform: uppercase;
+}
+
+.navlinkCTA{
+	@include btn;
+}
+
+.herosection{
+	@include mycontain;
+	background-color: none;
+	// @include media('<=phone','<=425px') {
+	// 	width: 90vw;
+	// }
+	// @include media('>phone', '<=425px') {
+	// 	width: 90vw;
+	// }
+	@include media('<=tablet', ) {
+		width: 90vw;
+	}
+}
+
+.herotext{
+	@include Bold_font(7.4rem,$black);
+	padding: 23rem 0rem 15rem;
+	max-width: 95rem;
+	line-height: 7.4rem;
+	margin: 0;
+	@include media('<=phone') {
+		@include Bold_font(3.7rem,$black);
+		padding: 10rem 0rem 5rem;
+		// max-width: 95rem;
+		line-height: 3.7rem;
+	}
+	@include media('>phone', '<=425px') {
+		@include Bold_font(4.6rem,$black);
+		padding: 10rem 0rem 5rem;
+		// max-width: 95rem;
+		line-height: 4.6rem;
+	}
+		@include media('>=425px','<=tablet') {
+		@include Bold_font(5.2rem,$black);
+		padding: 15rem 0rem 10rem;
+		// max-width: 95rem;
+		line-height: 5.2rem;
+	}
+	@include media('>tablet','<desktop') {
+	@include Bold_font(6.5rem,$black);
+	padding: 20rem 0rem 5rem;
+	max-width: 85rem;
+	line-height: 6.5rem;
+	}
+}
+
+.Biocontain{
+	@include flexbox;
+	@include mycontain;
+	@include justify-content (space-between);
+	padding: 5rem 0;
+	
+	@include media('<=tablet', ) {
+		@include justify-content (flex-first);
+		flex-wrap: wrap;
+		width: 90vw;
+		padding: 2rem 0;
+	}
+	
+}
+
+.wwa{
+
+	@include describer ($black);
+
+	@include media('<=phone') {
+		@include Bold_font(1rem,$black);
+		padding-bottom: 3rem;
+	}
+	@include media('>phone', '<=425px') {
+		@include Bold_font(1.1rem,$black);
+		padding-bottom: 3rem;
+	}
+	
+	@include media('>=425px','<=tablet') {
+		@include Bold_font(1.2rem,$black);
+		padding-bottom:  3rem;
+	}
+
+	@include media('>tablet','<desktop') {
+		@include Bold_font(1.3rem,$black);
+		
+	}
+}
+
+.Bio{
+	
+	// margin-right: 9rem;
+}
+
+.Biotitle{
+	@include Bold_font(3.6rem, $black);
+	display: block;
+	margin: 0;
+
+	@include media('<=phone') {
+		@include Bold_font(2.2rem,$black);
+	}
+	@include media('>phone', '<=425px') {
+		@include Bold_font(2.8rem,$black);
+	}
+	@include media('>=425px','<=tablet') {
+		@include Bold_font(3.2rem,$black);
+	}
+	@include media('>tablet','<desktop') {
+		@include Bold_font(3.4rem,$black);
+		
+	}
+}
+
+.dip{
+	display:none;
+}
+.Biotext{
+	@include Book_font(2.5rem, $black);
+	display: inline-block;
+	max-width: 65rem;
+	padding-top: .5rem;
+	margin: 0;
+	
+	@include media('<=phone') {
+		@include Book_font(1.6rem,$black);
+		padding-top: 1rem;
+		// max-width: 20rem;
+	}
+	@include media('>phone', '<=425px') {
+		@include Book_font(1.8rem,$black);
+		padding-top: 1rem;
+		// max-width: 35rem;
+	}
+	@include media('>=425px','<=tablet') {
+		@include Book_font(2rem,$black);
+		padding-top: 1rem;
+		// max-width: 45rem;
+	}
+	@include media('>tablet','<desktop') {
+		@include Book_font(2.3rem,$black);
+		padding-top: 1rem;
+		// max-width: 50rem;
+	}
+}
+
+.break{
+	@include media('<tablet') {
+		display: none;
+	}
+}
+.casestudygallery{
+	background-color: white;
+}
+
+.gallery-container{
+	// @include mycontain;
+	display: grid;
+	// grid-template-columns: 2fr repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-rows: repeat(3, 600px);
+	grid-template-areas: 
+	"item-1 item-1 item-2"
+	"item-3 item-4 item-4"
+	"item-5 item-6 item-7";
+	grid-gap: 1rem;
+	// grid-auto-flow: dense;
+
+	@media (max-width: 40rem) {
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		grid-template-areas: 
+		"item-1  item-2"
+		"item-3  item-4"
+		"item-5 item-6 ";
+
+	}
+}
+
+
+.gallery-item-1{
+	background-color: $blue;
+	grid-area: item-1;
+}
+
+.gallery-item-2{
+	background-color: $dgray;
+	grid-area: item-2;
+}
+
+.gallery-item-3{
+	background-color: $black;
+	grid-area: item-3;
+}
+
+.gallery-item-4{
+	background-color: $yellow;
+	grid-area: item-4;
+}
+
+.gallery-item-5{
+	background-color: $dblue;
+	grid-area: item-5;
+}
+
+.gallery-item-6{
+	background-color: $dgray;
+	grid-area: item-6;
+}
+
+.gallery-item-7{
+	background-color: $blue;
+	grid-area: item-7;
+}
+
+.Services_section{
+	background-color: $black;
+}
+
+.servicescontain{
+	@include mycontain;
+	
+}
+.wwd{
+	@include describer ($white);
+	grid-area: wwd;
+	display: inline;
+	
+}
+
+.servicescat{
+	@include Book_font(1.8rem, $white);
+	margin-bottom: 10rem;
+	max-width: 60rem;
+	grid-area: text;
+	display: inline-block;
+}
+
+.strategy{
+	@include Bold_font(4.1rem, $white);
+	margin: 0; 
+	display: inline-block;
+	grid-area: strat;
+}
+
+.strategy-list{
+	@include Bold_font(2.5rem, $dgray);
+	margin-top: 3rem;
+	display: inline-block;
+	grid-area: slist;
+	line-height: 5rem;
+}
+
+
+.identity{
+	@include Bold_font(4.1rem, $white);
+	margin: 0; 
+	display: inline-block;
+	grid-area: ident;
+}
+
+.identity-list{
+	@include Bold_font(2.5rem, $dgray);
+	margin-top: 3rem;
+	display: inline-block;
+	grid-area: ilist;
+	line-height: 5rem;
+}
+
+.experience{
+	@include Bold_font(4.1rem, $white);
+	margin: 0; 
+	display: inline-block;
+	grid-area: expr;
+	
+}
+
+.experience-list{
+	@include Bold_font(2.5rem, $dgray);
+	margin-top: 3rem;
+	display: inline-block;
+	grid-area: xlist;
+	line-height: 5rem;
+}
+
+.services-area{
+	@include grid;
+	// grid-template-columns: repeat(auto-fill, 1fr);
+	grid-template-areas: 
+		"wwd text text" 
+		"strat ident expr"
+		"slist ilist xlist" ;
+	// height: 80vh;
+	padding: 15rem 0;
+	@include justify-content (space-between);
+}
+
+
+
+// .servcat{
+// 	@include flexbox;
+// 	@include justify-content(space-between);
+// 	padding-top: 11rem;
+// }
+// .serv{
+// 	display: inline-block;	
+// }
+
+
+.CTA{
+	background-color: $blue;
+}
+
+.ctacontain{
+	@include mycontain;
+	@include flexbox;
+	flex-direction: column;
+	align-content: center;
+	padding: 10rem 0;
+}
+
+.ctatext{
+	@include Bold_font(4.1rem,$white);
+	margin: 0 auto;
+	text-align: center;
+
+
+}
+.ctabutton{
+	@include ctabtn;
+	margin: 3rem auto .8rem;
+	width: 55rem;
+}
+
+.footer{
+	background-color: $dgray;
+}
+
+.Footlogo{
+	grid-area: logo;
+	width: 16rem;
+}
+
+.copyright{
+	grid-area: 6;
+	@include Book_font(1.2rem,$dblue);	margin: 0;
+}
+
+.walkin{
+	grid-area: walkin;
+}
+
+.sayhello{
+	grid-area: drop;
+}
+
+.connect{
+	grid-area: connect;
+}
+
+
+.returntotop{
+	@include Bold_font(1.4rem,$blue);
+	text-transform: uppercase;
+	margin: 0;
+	grid-area: return;
+	display:inline;
+	text-decoration: none;
+}
+
+
+.footercontain{
+	@include grid;
+	@include mycontain;
+	grid-template-areas: "logo logo   walkin drop connect return";
+	padding: 5rem 0;
+}
+
+.foottitle{
+	@include Bold_font (1.8rem,$black);
+	margin: 0 0 1rem;
+	// text-transform: uppercase;
+
+}
+
+.footaddr{
+	@include Book_font (1.4rem,$black);
+	margin: 0;
+	line-height: 1.8rem;
+}
+
+.sociallinks{
+	@include Book_font(1.4rem,$black);
+	text-decoration: none;
+	margin-top: 0;
+	line-height: 1.8rem;
+	&:hover{
+		color: $blue;
+
+	}
+}
+
+// WORK PAGE STARTS HERE
+
+.w-header{
+	width: auto;
+	height: auto;
+	background-color: $lgray;
+}
+
+.w-navlinks{
+	@include Bold_font(1.4rem,$black);
+	padding: 0 20px;
+	text-decoration: none;
+  	text-transform: uppercase;
+}
+
+.w-herosection{
+	@include mycontain;
+	@include flexbox;
+	@include justify-content(space-between);
+	height: auto;
+	padding-top: 15rem;
+	padding-bottom: 10rem;
+
+}
+
+.w-herocontain{
+	// padding-right: 10rem;
+}
+.w-herotext{
+	@include Bold_font(6.5rem,$black);
+	// padding: 23rem 0rem 15rem;
+	max-width: 85rem;
+	line-height: 6.5rem;
+	margin-bottom: 2rem;	
+}
+
+.w-heropara{
+	@include Book_font(2.4rem, $black);
+	margin-bottom: 8rem;
+
+}
+
+.w-wwd {
+	 @include describer ($black);
+}
+
+
+// SERVICES PAGE STARTS HERE
+
+.s-header{
+	width: auto;
+	height: auto;
+	background-color: $black;
+}
+
+.s-navlinks{
+	@include Bold_font(1.4rem,$white);
+	padding: 0 20px;
+	text-decoration: none;
+  	text-transform: uppercase;
+}
+
+.s-herosection{
+	@include mycontain;
+	@include flexbox;
+	@include justify-content(space-between);
+	height: auto;
+	padding-top: 15rem;
+	padding-bottom: 10rem;
+
+}
+
+.s-herocontain{
+	// padding-right: 10rem;
+}
+.s-herotext{
+	@include Bold_font(6.5rem,$white);
+	// padding: 23rem 0rem 15rem;
+	max-width: 85rem;
+	line-height: 6.5rem;
+	margin-bottom: 2rem;	
+}
+
+.s-heropara{
+	@include Book_font(2.4rem, $white);
+	margin-bottom: 8rem;
+
+}
+
+.s-catlink{
+	@include Bold_font(1.3rem,$white);
+	margin-right: 2rem;
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 1rem;
+	border-top: 0.2rem solid transparent;
+	text-transform: uppercase;
+	&:hover {
+		border-top: 0.2rem solid $blue;
+
+	}
+}
+
+.s-strategy{
+	background-color: $lgray;
+}
+
+.s-identity{
+	background-color: $dgray;
+}
+
+.s-experience{
+	background-color: $dblue;
+}
+
+// Strategy//
+.s-strategy-contain{
+	@include flexbox;
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include mycontain;
+}
+
+.s-strategy-text{
+	padding-right: 10rem;
+
+}
+
+.s-strategy-header{
+	@include Bold_font(4.1rem, $black);
+	margin-bottom: 3rem;
+}
+
+.s-strategy-describ{
+	@include Book_font(1.8rem,$black);
+	margin-bottom: 3rem;
+}
+
+.s-strategy-catig-contain{
+	@include flexbox;
+	// @include justify-content(space-between);
+}
+.s-strategy-catig{
+	@include Book_font(1.6rem, $black);
+	margin-right: 6rem;
+	line-height: 4rem;
+}
+
+.s-strategy-img{
+	width: 50rem;
+}
+
+// 	identiity//
+
+.s-identity-contain{
+	@include flexbox;
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include mycontain;
+}
+
+.s-identity-text{
+	padding-left: 10rem;
+
+}
+
+.s-identity-header{
+	@include Bold_font(4.1rem, $black);
+	margin-bottom: 3rem;
+}
+
+.s-identity-describ{
+	@include Book_font(1.8rem,$black);
+	margin-bottom: 3rem;
+}
+
+.s-identity-catig-contain{
+	@include flexbox;
+	// @include justify-content(space-between);
+}
+.s-identity-catig{
+	@include Book_font(1.6rem, $black);
+	margin-right: 6rem;
+	line-height: 4rem;
+}
+
+.s-identity-img{
+	width: 50rem;
+}
+
+// Experience//
+
+.s-experience-contain{
+	@include flexbox;
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include mycontain;
+}
+
+.s-experience-text{
+	padding-right: 10rem;
+
+}
+
+.s-experience-header{
+	@include Bold_font(4.1rem, $white);
+	margin-bottom: 3rem;
+}
+
+.s-experience-describ{
+	@include Book_font(1.8rem,$white);
+	margin-bottom: 3rem;
+}
+
+.s-experience-catig-contain{
+	@include flexbox;
+	// @include justify-content(space-between);
+}
+.s-experience-catig{
+	@include Book_font(1.6rem, $white);
+	margin-right: 6rem;
+	line-height: 4rem;
+}
+
+.s-experience-img{
+	width: 50rem;
+}
